@@ -1,0 +1,72 @@
+[
+  {
+    "date": "4 февр",
+    "name": "Вчера",
+    "icon_link": "https:\/\/yastatic.net\/weather\/i\/icons\/funky\/dark\/bkn_-sn_d.svg",
+    "temp_day": "−1",
+    "temp_night": "−7"
+  },
+  {
+    "date": "5 февр",
+    "name": "Сегодня",
+    "icon_link": "https:\/\/yastatic.net\/weather\/i\/icons\/funky\/dark\/ovc_-sn.svg",
+    "temp_day": "−1",
+    "temp_night": "−6"
+  },
+  {
+    "date": "6 февр",
+    "name": "Пн",
+    "icon_link": "https:\/\/yastatic.net\/weather\/i\/icons\/funky\/dark\/ovc_-sn.svg",
+    "temp_day": "−1",
+    "temp_night": "−8"
+  },
+  {
+    "date": "7 февр",
+    "name": "Вт",
+    "icon_link": "https:\/\/yastatic.net\/weather\/i\/icons\/funky\/dark\/ovc_-sn.svg",
+    "temp_day": "−1",
+    "temp_night": "−8"
+  },
+  {
+    "date": "8 февр",
+    "name": "Ср",
+    "icon_link": "https:\/\/yastatic.net\/weather\/i\/icons\/funky\/dark\/bkn_-sn_d.svg",
+    "temp_day": "−1",
+    "temp_night": "−5"
+  },
+  {
+    "date": "9 февр",
+    "name": "Чт",
+    "icon_link": "https:\/\/yastatic.net\/weather\/i\/icons\/funky\/dark\/ovc_-sn.svg",
+    "temp_day": "−1",
+    "temp_night": "−1"
+  },
+  {
+    "date": "10 февр",
+    "name": "Пт",
+    "icon_link": "https:\/\/yastatic.net\/weather\/i\/icons\/funky\/dark\/skc_d.svg",
+    "temp_day": "−1",
+    "temp_night": "−8"
+  },
+  {
+    "date": "11 февр",
+    "name": "Сб",
+    "icon_link": "https:\/\/yastatic.net\/weather\/i\/icons\/funky\/dark\/bkn_d.svg",
+    "temp_day": "−1",
+    "temp_night": "−9"
+  },
+  {
+    "date": "12 февр",
+    "name": "Вс",
+    "icon_link": "https:\/\/yastatic.net\/weather\/i\/icons\/funky\/dark\/bkn_d.svg",
+    "temp_day": "−1",
+    "temp_night": "−9"
+  },
+  {
+    "date": "13 февр",
+    "name": "Пн",
+    "icon_link": "https:\/\/yastatic.net\/weather\/i\/icons\/funky\/dark\/bkn_-sn_d.svg",
+    "temp_day": "−1",
+    "temp_night": "−5"
+  }
+]
