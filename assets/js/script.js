@@ -32,16 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let k = 0; k < json.length; k++) {
       const key = json[k];
       html +=
-        `<tr>
-        <td>${key['date']}</td>
-        <td>${key['name']}</td>
-        <td>
-          <div class="weather-table__img img">
-            <img alt="weather icon" src="${key.icon_link}">
-          </div>
+      `<tr>
+        <td>${key['id']}</td>
+        <td class="weather-table__link" colspan="2">
+          <a href="${key['id']}">
+            <div class="weather-table__img img">
+              <img alt="weather icon" src="${key['icon_link']}">
+            </div>
+            <p>${key['name']}</p>
+          </a>
         </td>
-        <td>${key.temp_day}</td>
-        <td>${key.temp_night}</td>
+        <td>${key['games']}</td>
+        <td>${key['win']}</td>
+        <td>${key['draw']}</td>
+        <td>${key['lost']}</td>
       </tr>`;
     }
     return html;

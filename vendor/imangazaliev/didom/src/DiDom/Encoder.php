@@ -16,6 +16,7 @@ class Encoder
     {
         if (function_exists('mb_convert_encoding')) {
             return mb_encode_numericentity($string, [0x80, 0x10FFFF, 0, ~0], $encoding);
+            //return mb_convert_encoding($string, 'HTML-ENTITIES', $encoding);
         }
 
         if ('UTF-8' !== $encoding) {

@@ -15,7 +15,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+a{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 body {
   padding: 30px 0;
   font-family: 'Montserrat';
@@ -31,7 +35,6 @@ body {
 
 .title {
   font-weight: 700;
-  margin-bottom: 20px;
 }
 
 .img {
@@ -43,6 +46,7 @@ body {
   height: 100%;
   display: block;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .icon {
@@ -65,7 +69,9 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
-
+.players__container{
+  max-width: 1000px;
+}
 .weather__row {
   display: flex;
   align-items: center;
@@ -119,12 +125,6 @@ body {
   padding: 0 10px;
 }
 
-.weather-table .weather-table__day,
-.weather-table .weather-table__name,
-.weather-table thead td {
-  width: 20%;
-}
-
 .weather-table tbody tr:nth-child(odd) {
   background-color: var(--color-gray);
 }
@@ -153,8 +153,14 @@ body {
   opacity: 1;
   visibility: visible;
 }
-
+.weather-table__link{
+  text-align: left;
+}
+.weather-table__link a{
+  display: inline-flex;
+  align-items: center;
+}
 .weather-table__img {
-  width: 70px;
-  margin: 0 auto;
+  min-width: 70px;
+  margin: 0 20px 0 0;
 }

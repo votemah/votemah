@@ -1,3 +1,12 @@
+<?
+  if (isset($_GET['id'])){
+    $data = json_decode(file_get_contents('assets/data/'.$_GET['id'].'.json'), JSON_OBJECT_AS_ARRAY);
+  }
+  if (!$data){
+    echo '<br>';
+    echo 'Состава под номером '.$_GET['id'].' нет.';
+  }
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -5,15 +14,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Парсинг</title>
+  <title>Игроки</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <div class="weather">
-    <div class="weather__container container">
+  <div class="players">
+    <div class="players__container container">
       <div class="weather__row">
-        <h1 class="weather__title title">Парсинг</h1>
+        <h1 class="weather__title title">Игроки</h1>
         <button class="weather__button button">
           <i class="weather__icon icon">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 286.052 286.052" style="enable-background:new 0 0 512 512" xml:space="preserve">
@@ -30,29 +39,35 @@
           <thead>
             <tr>
               <th rowspan='2'>#</th>
-              <th class="weather-table__link" rowspan='2' colspan="2">Команда</th>
+              <th rowspan='2'>Амплуа</th>
+              <th class="weather-table__link" rowspan='2' colspan="2">Игрок</th>
+              <th rowspan='2'>День рождения</th>
               <th rowspan='2'>Игры</th>
-              <th rowspan="2">Победы</th>
-              <th rowspan="2">Ничья</th>
-              <th rowspan="2">Поражения</th>
+              <th rowspan="2">Голы</th>
+              <th rowspan="2">Пенальти</th>
+              <th rowspan="2">Жёлтые карточки</th>
+              <th rowspan="2">Красные карточки</th>
           </thead>
           <tbody>
-            <? $data = json_decode(file_get_contents('assets/data/team.json'), JSON_OBJECT_AS_ARRAY);
+            <? 
             for ($i = 0; $i < count($data); $i++) { ?>
               <tr>
-                <td><?= $data[$i]['id'] ?></td>
+                <td><?= $data[$i]['number'] ?></td>
+                <td><?= $data[$i]['amplua'] ?></td>
                 <td class="weather-table__link" colspan="2">
-                  <a href="players.php?id=<?= $data[$i]['id'] ?>">
+                  <a target='_blank' href="<?= $data[$i]['player_link'] ?>">
                     <div class="weather-table__img img">
-                      <img alt="weather icon" src="<?= $data[$i]['icon_link'] ?>">
+                      <img alt="weather icon" src="<?= $data[$i]['img_link'] ?>">
                     </div>
                     <p><?= $data[$i]['name'] ?></p>
                   </a>
                 </td>
+                <td><?= $data[$i]['birthday'] ?></td>
                 <td><?= $data[$i]['games'] ?></td>
-                <td><?= $data[$i]['win'] ?></td>
-                <td><?= $data[$i]['draw'] ?></td>
-                <td><?= $data[$i]['lost'] ?></td>
+                <td><?= $data[$i]['goals'] ?></td>
+                <td><?= $data[$i]['assists'] ?></td>
+                <td><?= $data[$i]['yellow_card'] ?></td>
+                <td><?= $data[$i]['red_card'] ?></td>
               </tr>
             <? } ?>
           </tbody>
