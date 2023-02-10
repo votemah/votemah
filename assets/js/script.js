@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const btnUpdate = document.querySelector('.weather__button');
-  const tableBody = document.querySelector('.weather-table tbody');
+  const btnUpdate = document.querySelector('.team__button');
+  const tableBody = document.querySelector('.team-table tbody');
   // ОБНОВЛЯЕМ ДАННЫЕ И ТАБЛИЦУ БЕЗ ПЕРЕЗАГРУЗКИ
   btnUpdate.addEventListener('click', updateTable);
   async function updateTable(e) {
@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
       html +=
       `<tr>
         <td>${key['id']}</td>
-        <td class="weather-table__link" colspan="2">
+        <td class="team-table__link" colspan="2">
           <a href="${key['id']}">
-            <div class="weather-table__img img">
-              <img alt="weather icon" src="${key['icon_link']}">
+            <div class="team-table__img img">
+              <img alt="team icon" src="${key['icon_link']}">
             </div>
             <p>${key['name']}</p>
           </a>
