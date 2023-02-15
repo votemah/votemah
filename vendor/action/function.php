@@ -1,4 +1,4 @@
-<?
+<?php
 
 use DiDom\Document;
 use GuzzleHttp\Client;

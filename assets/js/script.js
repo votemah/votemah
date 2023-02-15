@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnUpdate.classList.add('_loading');
     tableBody.classList.add('_loading');
     try {
-      let response = await fetch('/vendor/action/parse.php');
+      let response = await fetch('vendor/action/parse.php');
       if (response.ok) {
         let result = await response.json();
         alert('Обновление прошло успешно!');
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `<tr>
         <td>${key['id']}</td>
         <td class="team-table__link" colspan="2">
-          <a href="${key['id']}">
+          <a href="players.php?id=${key['id']}">
             <div class="team-table__img img">
               <img alt="team icon" src="${key['icon_link']}">
             </div>

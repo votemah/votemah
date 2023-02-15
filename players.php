@@ -1,4 +1,4 @@
-<?
+<?php
   if (isset($_GET['id'])){
     $data = json_decode(file_get_contents('assets/data/'.$_GET['id'].'.json'), JSON_OBJECT_AS_ARRAY);
   }
@@ -45,7 +45,7 @@
               <th rowspan="2">Красные карточки</th>
           </thead>
           <tbody>
-            <? 
+            <?php 
             for ($i = 0; $i < count($data); $i++) { ?>
               <tr>
                 <td><?= $data[$i]['number'] ?></td>
@@ -65,7 +65,7 @@
                 <td><?= $data[$i]['yellow_card'] ?></td>
                 <td><?= $data[$i]['red_card'] ?></td>
               </tr>
-            <? } ?>
+            <?php } ?>
           </tbody>
         </table>
       </div>

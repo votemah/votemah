@@ -37,7 +37,7 @@
               <th rowspan="2">Поражения</th>
           </thead>
           <tbody>
-            <? $data = json_decode(file_get_contents('assets/data/team.json'), JSON_OBJECT_AS_ARRAY);
+            <?php $data = json_decode(file_get_contents('assets/data/team.json'), JSON_OBJECT_AS_ARRAY);
             for ($i = 0; $i < count($data); $i++) { ?>
               <tr>
                 <td><?= $data[$i]['id'] ?></td>
@@ -54,7 +54,7 @@
                 <td><?= $data[$i]['draw'] ?></td>
                 <td><?= $data[$i]['lost'] ?></td>
               </tr>
-            <? } ?>
+            <?php } ?>
           </tbody>
         </table>
       </div>
